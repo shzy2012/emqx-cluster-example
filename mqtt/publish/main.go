@@ -36,7 +36,7 @@ func main() {
 	mqtt.DEBUG = log.New(os.Stdout, "", 0)
 	mqtt.ERROR = log.New(os.Stdout, "", 0)
 	clientID := fmt.Sprintf("emqx_subscribe_client_%s", randomHex(3))
-	opts := mqtt.NewClientOptions().AddBroker("tcp://172.16.0.186:8888").SetClientID(clientID)
+	opts := mqtt.NewClientOptions().AddBroker("tcp://139.196.214.125:1883").SetClientID(clientID)
 
 	opts.SetKeepAlive(60 * time.Second)
 	// 设置消息回调处理函数
